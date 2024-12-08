@@ -24,6 +24,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+nav{
+  text-align: center;
+  margin:20px;
+  
+}
+
+main{
+  align-items: center;
+}
+
+#fotomia{
+    width: 400px;
+    height: 50%;
+    margin-left: 36%;
+}
+
+
+footer{
+  text-align: center;
+
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -40,3 +62,8 @@ a {
     color-scheme: dark;
   }
 }
+
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background:
+  rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center;}
+.modal-content { background: rgb(223, 142, 142); padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); color:black;}
+  
