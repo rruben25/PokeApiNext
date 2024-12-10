@@ -1,7 +1,7 @@
 'use client'
 // import '@/app/estilos/card.css'
 import { useState, useEffect } from "react";
-
+import setIsModalOpen from '@/app/componentes/cards'
 const RandomPokemons = () => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -37,9 +37,9 @@ const RandomPokemons = () => {
   }, []);
 
   if (loading) {
-    return <img src="https://media.tenor.com/XasjKGMk_wAAAAAM/load-loading.gif" alt="imagenloading"/> ;
+    return <img src="https://media.tenor.com/XasjKGMk_wAAAAAM/load-loading.gif" alt="imagenloading2"/> ;
   }
-  
+
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Random Pokémon</h1>
@@ -59,22 +59,7 @@ const RandomPokemons = () => {
               <strong>Salud (HP):</strong>{" "}
               {pokemon.stats.find((stat) => stat.stat.name === "hp").base_stat}
             </p>
-            <button
-              style={styles.button}
-              onClick={() =>
-                alert(
-                  `Más información de ${pokemon.name.toUpperCase()}:
-- ID: ${pokemon.id}
-- Salud (HP): ${
-                    pokemon.stats.find((stat) => stat.stat.name === "hp")
-                      .base_stat
-                  }
-- Experiencia base: ${pokemon.base_experience}`
-                )
-              }
-            >
-              Saber más
-            </button>
+            <button onClick={() => setIsModalOpen(true)}>Saber más</button>
           </div>
         ))}
       </div>

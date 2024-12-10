@@ -37,9 +37,9 @@ const RandomPokemons = () => {
   }, []);
 
   if (loading) {
-    return <img src="https://media.tenor.com/XasjKGMk_wAAAAAM/load-loading.gif" alt="imagenloading"/> ;
+    return <p>Loading...</p>;
   }
-  
+
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>Random Pokémon</h1>

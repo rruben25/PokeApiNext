@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import '../estilos/cards.css';
 export  function ModalLayout({ children }) {
   return ( <div className="modal-overlay"> <div className="modalcontent"> {children} </div> </div> ); }
+
+  
   
 const RandomPokemonCard = () => {
   const [pokemon, setPokemon] = useState(null);
@@ -53,11 +55,12 @@ const RandomPokemonCard = () => {
               </div>
             </div>
           )}
+          
         </div>
       ) : (
         <p>Cargando Pokémon...</p>
       )}
-
+      
       
 
 
@@ -104,6 +107,7 @@ const RandomPokemonCard = () => {
         }
       `}</style> */}
     </div>
+    
   );
 };
 
